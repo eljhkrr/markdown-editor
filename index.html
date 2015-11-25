@@ -22,11 +22,25 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <!-- <h3 class="text-center text-muted">markdown editor</h3> -->
+        <header class="text-center">markdown editor</header>
+
         <div class="container-fluid wrapper">
-            <h3 class="text-center text-muted">markdown editor</h3>
+            
+            <div class="row">
+                <div class="col-md-12 controls">
+                    <button class="btn btn-default"><i class="fa fa-bold" ng-click="bold()"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-italic" ng-click="italic()"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-keyboard-o" ng-click="kbd()"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-paragraph" ng-click="paragraph()"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-arrows-h" ng-click="insert_hr()"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-list-ul" ng-click="ul()"></i></button>
+                    <button class="btn btn-default"><i class="fa fa-list-ol" ng-click="ol()"></i></button>
+                </div>
+            </div>
             <div class="col-md-6 plaintext">
-                <!-- <h3 class="text-center">Plaintext</h3> -->
-                <textarea ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectionText()"></textarea>
+                
+                <textarea id="plaintext" ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectedText()"></textarea>
             </div>
             <div class="col-md-6 htmlcontent">
                 <!-- <h3 class="text-center">HTML</h3> -->
