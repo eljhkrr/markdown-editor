@@ -21,13 +21,13 @@
         <![endif]-->
 
         <div class="container-fluid wrapper">
-            <h2 class="text-center">Markdown editor</h2>
+            <h3 class="text-center text-muted">markdown editor</h3>
             <div class="col-md-6 plaintext">
-                <h3 class="text-center">Plaintext</h3>
-                <textarea ng-model="plaintext"></textarea>
+                <!-- <h3 class="text-center">Plaintext</h3> -->
+                <textarea ng-model="plaintext" placeholder="plaintext goes here"></textarea>
             </div>
             <div class="col-md-6 htmlcontent">
-                <h3 class="text-center">HTML</h3>
+                <!-- <h3 class="text-center">HTML</h3> -->
                 <div markdown-to-html="plaintext"></div>
             </div>
         </div>
