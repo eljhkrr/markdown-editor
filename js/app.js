@@ -1,11 +1,10 @@
-var app = angular.module("markdown-editor", ["ngSanitize"]);
-var converter = new showdown.Converter();
+var app = angular.module("markdown-editor", ["ng-showdown"]);
 
-app.controller("AppController",["$scope", "$sce", function($scope, $sce){
+app.controller("AppController",["$scope", "$showdown", function($scope, $showdown){
 
 	$scope.plaintext = "* this";
 
 
-	$scope.htmlcontent = converter.makeHtml($scope.plaintext);
+	//$scope.htmlcontent = converter.makeHtml($scope.plaintext);
 
 }]);
