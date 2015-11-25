@@ -4,4 +4,14 @@ app.controller("AppController",["$scope", "$showdown", function($scope, $showdow
 
 	$scope.plaintext = "";
 
+	$scope.getSelectionText = function() {
+		var text = "";
+		if (window.getSelection) {
+		  text = window.getSelection().toString();
+		} else if (document.selection && document.selection.type != "Control") {
+		  text = document.selection.createRange().text;
+		}
+		console.log(text);
+	};
+
 }]);

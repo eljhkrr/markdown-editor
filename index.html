@@ -12,6 +12,8 @@
 
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
         <link rel="stylesheet" href="css/app.css">
       
     </head>
@@ -24,7 +26,7 @@
             <h3 class="text-center text-muted">markdown editor</h3>
             <div class="col-md-6 plaintext">
                 <!-- <h3 class="text-center">Plaintext</h3> -->
-                <textarea ng-model="plaintext" placeholder="plaintext goes here"></textarea>
+                <textarea ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectionText()"></textarea>
             </div>
             <div class="col-md-6 htmlcontent">
                 <!-- <h3 class="text-center">HTML</h3> -->
