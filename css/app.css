@@ -30,7 +30,7 @@ header{
 }
 
 .htmlcontent > div{
-	border: 2px solid #ddd;
+	border: 1px solid #ddd;
 	height: 80vh;
 	max-height: 80vh;
 	overflow-y: scroll;
