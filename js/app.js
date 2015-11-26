@@ -1,4 +1,4 @@
-var app = angular.module("markdown-editor", ["ng-showdown"]);
+var app = angular.module("markdown-editor", ["ng-showdown", "ui.bootstrap"]);
 
 app.controller("AppController",["$scope", "$showdown", function($scope, $showdown){
 
@@ -224,6 +224,13 @@ app.controller("AppController",["$scope", "$showdown", function($scope, $showdow
             }
         };
 
+		$scope.insertHeader = function(level){
+			var str = [];
+			for (var i = 0; i < level; i++){
+				str.push("#");
+			}
+			$scope.insertAtCaret("plaintext", "\n" + str.join("") + " ");
+		};
 
 }]);
 

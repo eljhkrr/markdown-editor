@@ -43,4 +43,5 @@ header{
 
 .controls .btn-default{
 	border: none;
+	border-radius: 0;
 }
