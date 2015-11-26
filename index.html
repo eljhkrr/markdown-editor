@@ -35,6 +35,8 @@
                     <button class="btn btn-default"><i class="fa fa-arrows-h" ng-click="insert_hr()"></i></button>
                     <button class="btn btn-default"><i class="fa fa-list-ul" ng-click="ul()"></i></button>
                     <button class="btn btn-default"><i class="fa fa-list-ol" ng-click="ol()"></i></button>
+
+                    <button class="btn btn-default"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
                 </div>
             </div>
             <div class="col-md-6 plaintext">
@@ -52,6 +54,7 @@
         <script src="js/angular-sanitize.min.js"></script>
         <script src="js/showdown.min.js"></script>
         <script src="js/ng-showdown.min.js"></script>
+        <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>
