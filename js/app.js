@@ -4,6 +4,7 @@ app.controller("AppController",["$scope", "$showdown", function($scope, $showdow
 
 	$scope.plaintext = "";
 	$scope.selectedText = "";
+	$scope.isCollapsed = false;
 
 	$scope.getSelectedText = function() {
 		var text = "";
