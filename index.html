@@ -31,15 +31,15 @@
             
             <div class="row">
                 <div class="col-md-12 controls">
-                    <button class="btn btn-default"><i class="fa fa-bold" ng-click="bold()"></i></button>
-                    <button class="btn btn-default"><i class="fa fa-italic" ng-click="italic()"></i></button>
-                    <button class="btn btn-default"><i class="fa fa-keyboard-o" ng-click="kbd()"></i></button>
-                    <button class="btn btn-default"><i class="fa fa-paragraph" ng-click="paragraph()"></i></button>
-                    <button class="btn btn-default"><i class="fa fa-arrows-h" ng-click="insert_hr()"></i></button>
-                    <button class="btn btn-default"><i class="fa fa-list-ul" ng-click="ul()"></i></button>
-                    <button class="btn btn-default"><i class="fa fa-list-ol" ng-click="ol()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="Bold"><i class="fa fa-bold" ng-click="bold()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="Italic"><i class="fa fa-italic" ng-click="italic()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="<kbd> tag"><i class="fa fa-keyboard-o" ng-click="kbd()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="paragraph"><i class="fa fa-paragraph" ng-click="paragraph()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="insert <hr>"><i class="fa fa-arrows-h" ng-click="insert_hr()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="unordered list"><i class="fa fa-list-ul" ng-click="ul()"></i></button>
+                    <button class="btn btn-default" uib-tooltip="ordered list"><i class="fa fa-list-ol" ng-click="ol()"></i></button>
                     <div class="btn-group" uib-dropdown>
-                        <button uib-dropdown-toggle class="btn btn-default">
+                        <button uib-dropdown-toggle class="btn btn-default" uib-tooltip="insert header">
                             <i class="fa fa-header"></i> <span class="caret"></span>
                         </button>
                         <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">
@@ -51,8 +51,7 @@
                             <li role="menuitem" ng-click="insertHeader(6)"><a href="#">Level 6 header <strong>h6</strong></a></li>
                         </ul>
                     </div>
-
-                    <button class="btn btn-default"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
+                    <button class="btn btn-default" uib-tooltip="download text"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
                 </div>
             </div>
             <div class="col-md-6 plaintext">
