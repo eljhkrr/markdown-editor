@@ -28,9 +28,8 @@
         </header>
 
         <div class="container-fluid wrapper row">
-            
-            <div class="row">
-                <div class="col-md-12 controls">
+            <div class="col-md-6 plaintext">
+                <div class=" controls"> 
                     <button class="btn btn-default" uib-tooltip="Bold"><i class="fa fa-bold" ng-click="bold()"></i></button>
                     <button class="btn btn-default" uib-tooltip="Italic"><i class="fa fa-italic" ng-click="italic()"></i></button>
                     <button class="btn btn-default" uib-tooltip="<kbd> tag"><i class="fa fa-keyboard-o" ng-click="kbd()"></i></button>
@@ -60,17 +59,12 @@
                     </button>
                     <button class="btn btn-default" uib-tooltip="download text"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
                 </div>
-            </div>
-            <div class="col-md-6 plaintext">
-                
                 <textarea id="plaintext" ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectedText()"></textarea>
             </div>
             <div class="col-md-6 htmlcontent">
                 <div markdown-to-html="plaintext"></div>
             </div>
         </div>
-
-        
 
         <script src="js/angular.min.js"></script>
         <script src="js/angular-sanitize.min.js"></script>
