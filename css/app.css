@@ -20,6 +20,7 @@ header > i{
 
 header > i:hover{
 	cursor: pointer;
+	color: #fff;
 }
 
 .plaintext{
