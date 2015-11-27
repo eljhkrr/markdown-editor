@@ -233,6 +233,19 @@ app.controller("AppController",["$scope", "$showdown", function($scope, $showdow
 			$scope.insertAtCaret("plaintext", "\n" + str.join("") + " ");
 		};
 
+		$scope.code = function(){
+			console.log("Selected Text: " + $scope.selectedText);
+			if ($scope.selectedText == ""){
+				// insert line break and 4 spaces
+				// TODO: findout why tab isn't working
+				$scope.insertAtCaret("plaintext", "\n\n    ");
+			} else {
+				// surround text with tick marks ``
+				var str = $scope.plaintext;
+				$scope.plaintext = str.replace($scope.selectedText, " `" + $scope.selectedText + "` ");
+			}
+		};
+
 }]);
 
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
