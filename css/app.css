@@ -29,8 +29,9 @@ header > i:hover{
 	height: 80vh;
 	width: 100%;
 	resize: none;
-	overflow-y: scroll;
+	overflow-y: auto;
 	background-color: #efefef;
+	border: none;
 }
 
 .htmlcontent{
@@ -38,10 +39,9 @@ header > i:hover{
 }
 
 .htmlcontent > div{
-	border: 1px solid #ddd;
 	height: 80vh;
 	max-height: 80vh;
-	overflow-y: scroll;
+	overflow-y: auto;
 	padding: 10px;
 }
 
