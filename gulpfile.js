@@ -5,7 +5,8 @@ var gulp = require('gulp'),
 	uglifycss = require('gulp-uglifycss'),
 	jshint = require('gulp-jshint'),
 	htmlreplace = require('gulp-html-replace'),
-	bower = require('gulp-bower');
+	bower = require('gulp-bower'),
+	minifyHTML = require('gulp-minify-html');
 
 
 gulp.task("compressjs", function(){
@@ -36,18 +37,27 @@ gulp.task("compresscss", function(){
 			.pipe(gulp.dest("dist/"));
 });
 
+
 gulp.task("lint", function(){
 	return gulp.src("js/*.js")
 			.pipe(jshint())
 			.pipe(jshint.reporter('default'));
 });
 
+
 gulp.task("build-html", function(){
+	var opts = {
+		conditionals: true,
+		spare: true,
+		quotes: true
+	}
+
 	gulp.src("index.html")
 		.pipe(htmlreplace({
 			"css": "app.min.css",
 			"js": "app.min.js"
 		}))
+		.pipe(minifyHTML(opts))
 		.pipe(gulp.dest("dist/"));
 });
 
