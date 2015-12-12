@@ -1,0 +1,28 @@
+{
+  "name": "markdown-editor",
+  "version": "0.0.1",
+  "description": "*** A simple plain vanilla markdown editor with easy to use rich-text controls.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "karma"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheRakken/markdown-editor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheRakken/markdown-editor/issues"
+  },
+  "homepage": "https://github.com/TheRakken/markdown-editor",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1",
+    "gulp-uglifycss": "^1.0.5",
+    "jshint": "^2.8.0"
+  }
+}
