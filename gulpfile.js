@@ -3,7 +3,8 @@ var gulp = require('gulp'),
 	concat = require('gulp-concat'),
 	rename = require('gulp-rename'),
 	uglifycss = require('gulp-uglifycss'),
-	jshint = require('gulp-jshint');
+	jshint = require('gulp-jshint'),
+	htmlreplace = require('gulp-html-replace');
 
 gulp.task("compressjs", function(){
 	return gulp.src("js/*.js")
@@ -25,4 +26,13 @@ gulp.task("lint", function(){
 	return gulp.src("js/*.js")
 			.pipe(jshint())
 			.pipe(jshint.reporter('default'));
+});
+
+gulp.task("build-html", function(){
+	gulp.src("index.html")
+		.pipe(htmlreplace({
+			"css": "app.min.css",
+			"js": "app.min.js"
+		}))
+		.pipe(gulp.dest("dist/"));
 });
