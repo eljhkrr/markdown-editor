@@ -54,6 +54,7 @@ gulp.task("build-html", function(){
 
 	gulp.src("index.html")
 		.pipe(htmlreplace({
+			"font-awesome": "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
 			"css": "app.min.css",
 			"js": "app.min.js"
 		}))
