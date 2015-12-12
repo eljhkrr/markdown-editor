@@ -14,7 +14,7 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
+  "dependencies": {
     "bootstrap": "twbs/bootstrap#~3.3.6",
     "font-awesome": "~4.5.0",
     "angular": "~1.4.8",

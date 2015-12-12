@@ -7,6 +7,7 @@ var gulp = require('gulp'),
 	htmlreplace = require('gulp-html-replace'),
 	bower = require('gulp-bower');
 
+
 gulp.task("compressjs", function(){
 	return gulp.src("js/*.js")
 			.pipe(concat("all.js"))
