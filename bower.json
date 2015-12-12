@@ -22,6 +22,6 @@
     "showdown": "~1.3.0",
     "ng-showdown": "~1.1.0",
     "chronicle": "~1.0.10",
-    "angular-bootstrap": "git@github.com:angular-ui/bootstrap.git#~0.14.3"
+    "angular-bootstrap": "~0.14.3"
   }
 }

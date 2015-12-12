@@ -1,4 +1,4 @@
-var app = angular.module("markdown-editor", ["ng-showdown", 'ui.bootstrap.collapse', 'ui.bootstrap.dropdown', 'ui.bootstrap.position', "Chronicle"]);
+var app = angular.module("markdown-editor", ["ng-showdown", "ui.bootstrap", "Chronicle"]);
 
 app.controller("AppController",["$scope", "$showdown", "Chronicle", function($scope, $showdown, Chronicle){
 
