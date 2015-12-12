@@ -9,7 +9,15 @@ var gulp = require('gulp'),
 
 
 gulp.task("compressjs", function(){
-	return gulp.src("js/*.js")
+	return gulp.src([
+			"vendor/angular/angular.js",
+			"vendor/angular-sanitize/angular-sanitize.js",
+			"vendor/showdown/dist/showdown.js",
+			"vendor/ng-showdown/dist/ng-showdown.js",
+			"vendor/angular-bootstrap/ui-bootstrap-tpls.js",
+			"vendor/chronicle/chronicle.js",
+			"js/app.js"
+		])
 			.pipe(concat("all.js"))
 			.pipe(uglifyjs())
 			.pipe(rename("app.min.js"))
