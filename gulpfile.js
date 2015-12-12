@@ -25,7 +25,11 @@ gulp.task("compressjs", function(){
 });
 
 gulp.task("compresscss", function(){
-	return gulp.src("css/*.css")
+	return gulp.src([
+			"vendor/bootstrap/dist/css/bootstrap.css",
+			"vendor/font-awesome/css/font-awesome.css",
+			"css/app.css"
+		])
 			.pipe(concat("all.css"))
 			.pipe(uglifycss())
 			.pipe(rename("app.min.css"))
