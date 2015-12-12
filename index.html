@@ -57,7 +57,7 @@
                     <button class="btn btn-default" uib-tooltip="redo">
                         <i class="fa fa-rotate-right" ng-click="redo()"></i>
                     </button>
-                    <button class="btn btn-default" uib-tooltip="download text"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
+                    <button class="btn btn-default pull-right" uib-tooltip="download text"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
                 </div>
                 <textarea id="plaintext" ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectedText()"></textarea>
             </div>
