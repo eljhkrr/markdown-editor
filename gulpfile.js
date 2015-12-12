@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	rename = require('gulp-rename'),
 	uglifycss = require('gulp-uglifycss'),
 	jshint = require('gulp-jshint'),
-	htmlreplace = require('gulp-html-replace');
+	htmlreplace = require('gulp-html-replace'),
+	bower = require('gulp-bower');
 
 gulp.task("compressjs", function(){
 	return gulp.src("js/*.js")
@@ -35,4 +36,8 @@ gulp.task("build-html", function(){
 			"js": "app.min.js"
 		}))
 		.pipe(gulp.dest("dist/"));
+});
+
+gulp.task("bower", function(){
+	return bower();
 });
