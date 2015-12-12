@@ -1,0 +1,27 @@
+{
+  "name": "markdown-editor",
+  "description": "*** A simple plain vanilla markdown editor with easy to use rich-text controls.",
+  "main": "gulpfile.js",
+  "license": "ISC",
+  "homepage": "https://github.com/TheRakken/markdown-editor",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "twbs/bootstrap#~3.3.6",
+    "font-awesome": "~4.5.0",
+    "angular": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "showdown": "~1.3.0",
+    "ng-showdown": "~1.1.0",
+    "chronicle": "~1.0.10",
+    "angular-bootstrap": "git@github.com:angular-ui/bootstrap.git#~0.14.3"
+  }
+}
