@@ -6,7 +6,8 @@ var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
 	htmlreplace = require('gulp-html-replace'),
 	bower = require('gulp-bower'),
-	minifyHTML = require('gulp-minify-html');
+	minifyHTML = require('gulp-minify-html'),
+	copy = require('gulp-copy');
 
 
 gulp.task("compressjs", function(){
@@ -60,6 +61,11 @@ gulp.task("build-html", function(){
 		}))
 		.pipe(minifyHTML(opts))
 		.pipe(gulp.dest("dist/"));
+});
+
+gulp.task("copy", function(){
+	return gulp.src("img/*")
+			.pipe(copy("dist/"))
 });
 
 gulp.task("bower", function(){
