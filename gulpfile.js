@@ -71,3 +71,5 @@ gulp.task("copy", function(){
 gulp.task("bower", function(){
 	return bower();
 });
+
+gulp.task("default", ["bower", "copy", "compresscss", "compressjs", "build-html"]);
