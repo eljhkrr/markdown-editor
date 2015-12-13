@@ -1,77 +1,10 @@
-<!doctype html>
-<html class="no-js" lang="en" ng-app="markdown-editor">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="apple-touch-icon" href="favicon.ico">
-
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-
-        <link rel="stylesheet" href="css/app.css">
-      
-    </head>
-    <body ng-controller="AppController">
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        <header class="text-center" uib-collapse="isCollapsed">
-            markdown editor
-            <i class="fa fa-close pull-right text-muted" ng-click="isCollapsed = !isCollapsed"></i>
-        </header>
-
-        <div class="container-fluid wrapper row">
-            <div class="col-md-6 plaintext">
-                <div class=" controls"> 
-                    <button class="btn btn-default" uib-tooltip="Bold"><i class="fa fa-bold" ng-click="bold()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="Italic"><i class="fa fa-italic" ng-click="italic()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="<kbd> tag"><i class="fa fa-keyboard-o" ng-click="kbd()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="paragraph"><i class="fa fa-paragraph" ng-click="paragraph()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="insert <hr>"><i class="fa fa-arrows-h" ng-click="insert_hr()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="unordered list"><i class="fa fa-list-ul" ng-click="ul()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="ordered list"><i class="fa fa-list-ol" ng-click="ol()"></i></button>
-                    <div class="btn-group" uib-dropdown>
-                        <button uib-dropdown-toggle class="btn btn-default" uib-tooltip="insert header">
-                            <i class="fa fa-header"></i> <span class="caret"></span>
-                        </button>
-                        <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">
-                            <li role="menuitem" ng-click="insertHeader(1)"><a href="#">Level 1 header <strong>h1</strong></a></li>
-                            <li role="menuitem" ng-click="insertHeader(2)"><a href="#">Level 2 header <strong>h2</strong></a></li>
-                            <li role="menuitem" ng-click="insertHeader(3)"><a href="#">Level 3 header <strong>h3</strong></a></li>
-                            <li role="menuitem" ng-click="insertHeader(4)"><a href="#">Level 4 header <strong>h4</strong></a></li>
-                            <li role="menuitem" ng-click="insertHeader(5)"><a href="#">Level 5 header <strong>h5</strong></a></li>
-                            <li role="menuitem" ng-click="insertHeader(6)"><a href="#">Level 6 header <strong>h6</strong></a></li>
-                        </ul>
-                    </div>
-                    <button class="btn btn-default" uib-tooltip="format code"><i class="fa fa-code" ng-click="code()"></i></button>
-                    <button class="btn btn-default" uib-tooltip="undo">
-                        <i class="fa fa-rotate-left" ng-click="undo()"></i>
-                    </button>
-                    <button class="btn btn-default" uib-tooltip="redo">
-                        <i class="fa fa-rotate-right" ng-click="redo()"></i>
-                    </button>
-                    <button class="btn btn-default" uib-tooltip="download text"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button>
-                </div>
-                <textarea id="plaintext" ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectedText()"></textarea>
-            </div>
-            <div class="col-md-6 htmlcontent">
-                <div markdown-to-html="plaintext"></div>
-            </div>
-        </div>
-
-        <script src="js/angular.min.js"></script>
-        <script src="js/angular-sanitize.min.js"></script>
-        <script src="js/showdown.min.js"></script>
-        <script src="js/ng-showdown.min.js"></script>
-        <script src="js/ui-bootstrap-tpls-0.14.3.min.js"></script>
-        <script src="js/chronicle.js"></script>
-        <script src="js/app.js"></script>
-    </body>
-</html>
+<!doctype html><html class="no-js" lang="en" ng-app="markdown-editor"><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><title></title><meta name="description"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="img/apple-touch-icon.png"><link rel="apple-touch-icon" href="img/favicon.ico"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><link rel="stylesheet" href="app.min.css"></head><body ng-controller="AppController"><!--[if lt IE 8]>
+ <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+ <![endif]--><header class="text-center" uib-collapse="isCollapsed">markdown editor <i class="fa fa-close pull-right text-muted" ng-click="isCollapsed = !isCollapsed"></i></header><div class="container-fluid wrapper row"><div class="col-md-6 plaintext"><div class="controls"><button class="btn btn-default" uib-tooltip="Bold"><i class="fa fa-bold" ng-click="bold()"></i></button> <button class="btn btn-default" uib-tooltip="Italic"><i class="fa fa-italic" ng-click="italic()"></i></button> <button class="btn btn-default" uib-tooltip="<kbd> tag"><i class="fa fa-keyboard-o" ng-click="kbd()"></i></button> <button class="btn btn-default" uib-tooltip="paragraph"><i class="fa fa-paragraph" ng-click="paragraph()"></i></button> <button class="btn btn-default" uib-tooltip="insert <hr>"><i class="fa fa-arrows-h" ng-click="insert_hr()"></i></button> <button class="btn btn-default" uib-tooltip="unordered list"><i class="fa fa-list-ul" ng-click="ul()"></i></button> <button class="btn btn-default" uib-tooltip="ordered list"><i class="fa fa-list-ol" ng-click="ol()"></i></button><div class="btn-group" uib-dropdown=""><button uib-dropdown-toggle="" class="btn btn-default" uib-tooltip="insert header"><i class="fa fa-header"></i> <span class="caret"></span></button><ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button"><li role="menuitem" ng-click="insertHeader(1)"><a href="#">Level 1 header <strong>h1</strong></a></li><li role="menuitem" ng-click="insertHeader(2)"><a href="#">Level 2 header <strong>h2</strong></a></li><li role="menuitem" ng-click="insertHeader(3)"><a href="#">Level 3 header <strong>h3</strong></a></li><li role="menuitem" ng-click="insertHeader(4)"><a href="#">Level 4 header <strong>h4</strong></a></li><li role="menuitem" ng-click="insertHeader(5)"><a href="#">Level 5 header <strong>h5</strong></a></li><li role="menuitem" ng-click="insertHeader(6)"><a href="#">Level 6 header <strong>h6</strong></a></li></ul></div><button class="btn btn-default" uib-tooltip="format code"><i class="fa fa-code" ng-click="code()"></i></button> <button class="btn btn-default" uib-tooltip="undo"><i class="fa fa-rotate-left" ng-click="undo()"></i></button> <button class="btn btn-default" uib-tooltip="redo"><i class="fa fa-rotate-right" ng-click="redo()"></i></button> <button class="btn btn-default pull-right" uib-tooltip="download text"><i class="fa fa-download" ng-click="downloadAsFile('file.md', plaintext)"></i></button></div><textarea id="plaintext" ng-model="plaintext" placeholder="plaintext goes here" ng-mouseup="getSelectedText()"></textarea></div><div class="col-md-6 htmlcontent"><div markdown-to-html="plaintext"></div></div></div><script src="app.min.js"></script><script type="text/javascript" async="">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-55784949-3', 'auto');
+            ga('send', 'pageview');
+        </script></body></html>
